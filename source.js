@@ -10,7 +10,7 @@ const chunkArrayInGroups = (array, num) => {
     let count = 0;
     for(let i=0; i<noOfSubArrays; i++){ // iterate through the batches required to form the final nested array
         subArray = []; // This will be the inner array that shall constitute items of the outer array
-        for(j=count; j<arrayLength; j++){ // count tracks the index of the items
+        for(let j=count; j<arrayLength; j++){ // count tracks the index of the items
             subArray.push(array[j]) // append item to subarray
             if (subArray.length === num && j !== arrayLength-1) { // Once the subarray is full before we exhaust all array items, we want to update our newArray
                 newArray.push(subArray);
@@ -22,20 +22,16 @@ const chunkArrayInGroups = (array, num) => {
             }
             count++;
         };
-        return newArray;
-
-
- 
-
     }
-    console.log(`Array length: ${arrayLength}  no. of sub arrays: ${noOfSubArrays}`);
+    return newArray;
+    
 }
 
-// console.log(chunkArrayInGroups([2, 5, 1, 5, 9, 8, 3], 3))
-// console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
-// console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3));
-// console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
-// console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+console.log(chunkArrayInGroups([2, 5, 1, 5, 9, 8, 3], 3))
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3));
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2));
