@@ -1,6 +1,6 @@
 # 🧩 Chunky Monkey Algorithm  
 
-Welcome to the **Chunky Monkey Algorithm** — a simple yet powerful **JavaScript practice project** built to strengthen your understanding of **loops**, **nested arrays**, and **array manipulation**! 🧠💪  
+Welcome to the **Chunky Monkey Algorithm** — a simple yet powerful **JavaScript practice project** built to strengthen understanding of **loops**, **nested arrays**, and **array manipulation**! 🧠💪  
 
 ---
 
